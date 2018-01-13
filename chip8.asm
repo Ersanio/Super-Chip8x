@@ -2151,6 +2151,8 @@ InitTilemapRAM:
 ;;; Update the SNES controller RAMs
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;		
 ControllerUpdate:
+		LSR $4212
+		BCS ControllerUpdate
 		LDA $4218
 		STA.b !ControllerData
 		
