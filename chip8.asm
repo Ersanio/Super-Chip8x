@@ -1,3 +1,16 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; CHIP-8 EMULATOR
+;;; WRITTEN FOR THE SNES BY Ersanio
+;;; https://twitter.com/Ersanio
+;;; https://github.com/Ersanio/Super-Chip8x/
+;;;
+;;; Extra thanks goes to:
+;;; - p4plus2 for pointing me in the right direction whenever I got stuck
+;;; - Lui37 for hardware testing and helping a bit with audio
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 LOROM
 incsrc const.asm
 
