@@ -14,11 +14,11 @@ To add ROMs, a few steps need to be done:
 ```
 ROMNAME:
 	incbin c8games/ROMNAME ;the name of the file
-.ROMNAME
+.END
 ```
 - chip8.asm: label "ROMS": Add a pointer to the path you added in above step:
 ```
-  dl ROM : dw ROMNAME_END-ROMNAME ; the name of the labels surrounding the ROM file
+  dl ROMNAME : dw ROMNAME_END-ROMNAME ; the name of the labels surrounding the ROM file
 ```
 - chip8.asm: label "ControllerLayouts": Add a pointer to a controller layout, CDefault if none.
 - Make sure the ControllerLayouts is in sync with the ROMs table e.g. if the "tetris" game is the first game in ROMs, it has to be the first game in ControllerLayouts also.
