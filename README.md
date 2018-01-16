@@ -1,5 +1,5 @@
 # Super Chip8x
-The Super Chipx is a Chip-8 Emulator for the Super Nintendo Entertainment System, written entirely in the 65c816 assembly language (and SPC-700 assembly for the audio).
+The Super Chip8x is a Chip-8 Emulator for the Super Nintendo Entertainment System, written entirely in the 65c816 assembly language (and SPC-700 assembly for the audio).
 
 # Features
 The emulator supports the option to mapping the 16 Chip-8 keys to SNES buttons (except for start and select) per ROM basis. The user will have to define the mapping manually. SNES button combinations are supported (e.g. B could be key 1, L+B could be key 2).
@@ -13,7 +13,7 @@ To add ROMs, a few steps need to be done:
 - chip8.asm: label "GAMES": Add the path to your ROM with labels:
 ```
 ROMNAME:
-	incbin c8games/ROMNAME ;the name of the file
+	incbin c8games/ROMNAME ;the name of the file. Doesn't have to match label name
 .END
 ```
 - chip8.asm: label "ROMS": Add a pointer to the path you added in above step:
