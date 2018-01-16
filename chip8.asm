@@ -249,10 +249,8 @@ EmuLoop:
 		WAI
 		LDA !Wait
 		BEQ EmuLoop
-		;CLI					;Enable IRQ
 
 		JSR ProcessEmuROMSwitching
-		;JSR TranslateButtonsToKeypresses
 
 		LDA !OpcodesPerFrame
 		STA !OpcodeLoop
@@ -379,9 +377,6 @@ DecreaseTimers:
 ;;; color
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ScreenHDMA:
-;note: level number can be anything from 000-1FF of course.
-
-level101:
 		PHP
 		REP #$20
 		LDY #$03
@@ -1639,30 +1634,29 @@ ControllerLayouts:
 		!CL = $0020
 		!CR = $0010
 		
-;b y select start U D L R a x l r 0 0 0 0 	
 CDefault:
-		dw $4000 : db $01 ; Y
-		dw $0040 : db $02 ; X
-		dw $8000 : db $03 ; B
-		dw $0080 : db $0C ; A
-		dw $4000|$0020 : db $04 ; Y + L
-		dw $0040|$0020 : db $05 ; X + L
-		dw $8000|$0020 : db $06 ; B + L
-		dw $0080|$0020 : db $0d ; A + L
-		dw $4000|$0010 : db $07 ; Y + R
-		dw $0040|$0010 : db $08 ; X + R
-		dw $8000|$0010 : db $09 ; B + R
-		dw $0080|$0010 : db $0e ; A + R
-		dw $4000|$0030 : db $0a ; Y + LR
-		dw $0040|$0030 : db $00 ; X + LR
-		dw $8000|$0030 : db $0b ; B + LR
-		dw $0080|$0030 : db $0f ; A + LR
+		dw !CY : db $01 ; Y
+		dw !CX : db $02 ; X
+		dw !CB : db $03 ; B
+		dw !CA : db $0C ; A
+		dw !CY|!CL : db $04 ; Y + L
+		dw !CX|!CL : db $05 ; X + L
+		dw !CB|!CL : db $06 ; B + L
+		dw !CA|!CL : db $0d ; A + L
+		dw !CY|!CR : db $07 ; Y + R
+		dw !CX|!CR : db $08 ; X + R
+		dw !CB|!CR : db $09 ; B + R
+		dw !CA|!CR : db $0e ; A + R
+		dw !CY|!CL|!CR : db $0a ; Y + LR
+		dw !CX|!CL|!CR : db $00 ; X + LR
+		dw !CB|!CL|!CR : db $0b ; B + LR
+		dw !CA|!CL|!CR : db $0f ; A + LR
 		
 		;generally accepted directional keys
-		dw $0800 : db $02 ; up
-		dw $0200 : db $04 ; left
-		dw $0100 : db $06 ; right
-		dw $0400 : db $08 ; down
+		dw !CUP : db $02 ; up
+		dw !CLEFT : db $04 ; left
+		dw !CRIGHT : db $06 ; right
+		dw !CDOWN : db $08 ; down
 .end
 
 CBlinky:
