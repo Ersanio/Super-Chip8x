@@ -319,7 +319,6 @@ start_block_upload:				;			 |\
 		BEQ .add_three			;$0080B1	 |/
 send_SPC_block:					;			 |
 		PHA						;$0080B3	 | Preserve A to store to $2140 later
-		LDA $7FFFFF
 		REP #$20				;$0080B4	 | 16 bit A
 		LDA [$00],Y				;$0080B6	 |\ Get data length
 		INY						;$0080B8	 | |
