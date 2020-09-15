@@ -6,8 +6,12 @@
 ;;; https://github.com/Ersanio/Super-Chip8x/
 ;;;
 ;;; Extra thanks goes to:
-;;; - p4plus2 for pointing me in the right direction whenever I got stuck
-;;; - Lui37 for hardware testing and helping a bit with audio
+;;; - p4plus2 (https://github.com/p4plus2) for pointing me in
+;;;    the right direction whenever I got stuck
+;;; - Lui37 (https://github.com/Lui37) for hardware testing and 
+;;;    helping a bit with audio
+;;; - Ladida (https://github.com/Matsurika) for hardware testing and
+;;;    helping with controller input
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
