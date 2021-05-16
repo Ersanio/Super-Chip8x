@@ -1,6 +1,13 @@
 # Super Chip8x
 The Super Chip8x is a Chip-8 Emulator for the Super Nintendo Entertainment System, written entirely in the 65c816 assembly language (and SPC-700 assembly for the audio).
 
+# Screenshots
+![title](https://user-images.githubusercontent.com/4497840/118404619-ee462200-b673-11eb-9882-342507db819d.gif)
+![pong](https://user-images.githubusercontent.com/4497840/118404620-ef774f00-b673-11eb-8e7d-621753d8e70e.gif)
+![bricks](https://user-images.githubusercontent.com/4497840/118404621-f00fe580-b673-11eb-840c-520eb120aa5e.gif)
+![tetris](https://user-images.githubusercontent.com/4497840/118404623-f0a87c00-b673-11eb-992e-9cae2bb405b9.gif)
+![maze](https://user-images.githubusercontent.com/4497840/118404624-f1411280-b673-11eb-89f8-459a6d3fc4c1.gif)
+
 # Features
 The emulator supports the option to mapping the 16 Chip-8 keys to SNES buttons (except for start and select) per ROM basis. The user will have to define the mapping manually. SNES button combinations are supported (e.g. B could be key 1, L+B could be key 2).
 
